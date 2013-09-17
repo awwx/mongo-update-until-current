@@ -65,20 +65,20 @@ The `updateUntilCurrent` function takes four arguments:
 * The collection to perform the atomic update in.
 
 * A [selector](http://docs.meteor.com/#selectors) which matches one
-  document in the collection to update.  This can be and often is a
+  document in the collection to update.  This can be (and often is) a
   string, the id of the document.
 
 * An updater function, described below.
 
 * An optional error callback, called if there is too much contention
-  and the update could not be applied after multiple retries.  An
-  error is thrown if the update can’t be applied and there isn’t an
-  error callback.
+  and the update could not be applied after multiple retries.  If the
+  error callback isn’t specified, an error is thrown if the update
+  can’t be applied.
 
-The updater function takes one argument, the document read using the
-passed selector.  It returns two values in an array: a selector to
-check whether the relevant part of the document hasn’t changed, and a
-modifier to perform the update.
+The updater function takes one argument, the document that was read
+using the passed selector.  It returns two values in an array: a
+selector to check whether the relevant part of the document hasn’t
+changed, and a modifier to perform the update.
 
 As a simple example, suppose we didn’t have `$inc`, and wanted to
 increment a count.
