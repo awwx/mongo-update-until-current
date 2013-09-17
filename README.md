@@ -4,9 +4,9 @@ Advanced atomic updates of Mongo documents using the
 [Update if Current](http://docs.mongodb.org/manual/tutorial/isolate-sequence-of-operations/#update-if-current)
 pattern, retried until the update can be successfully applied.
 
-Updates of Mongo documents are atomic when the update is entirely
-specified by the `modifier` argument of the update method.  For
-example, if two methods execute
+Updates of Mongo documents are automatically atomic when the update is
+entirely specified by the `modifier` argument of the update method.
+For example, if two methods execute
 
     collection.update(id, {$inc: {count: 1}});
 
