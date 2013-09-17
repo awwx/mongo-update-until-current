@@ -137,7 +137,7 @@ dependencies, you can use
 ## Donate
 
 An easy and effective way to support the continued maintenance of this
-package and the development of new and useful packages is to [donate
+package (and the development of new and useful packages) is to [donate
 through Gittip](https://www.gittip.com/awwx/).
 
 Gittip is a [platform for sustainable
