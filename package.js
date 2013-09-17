@@ -10,7 +10,7 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use(['coffeescript', 'tinytest', 'update-until-current'], ['client', 'server']);
+  api.use(['coffeescript', 'tinytest', 'mongo-update-until-current'], ['client', 'server']);
   api.add_files(['client-tests.coffee'], 'client');
   api.add_files(['server-tests.coffee'], 'server');
 });
