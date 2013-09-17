@@ -131,7 +131,7 @@ To install this mongo-update-until-current package and its other
 dependencies, you can use
 [Meteorite](http://oortcloud.github.io/meteorite/) as usual:
 
-    $ mrt install mongo-update-until-current
+    $ mrt add mongo-update-until-current
 
 
 ## Donate
