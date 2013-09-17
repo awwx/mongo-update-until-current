@@ -30,18 +30,18 @@ document to the database:
     var doc = collection.findOne(id);
     // prepend "apple"
     doc.array.splice(0, 0, 'apple');
-    collection.update(id, doc);
+    collection.update(id, {$set: {array: doc.array}});
 
-The problem here is that any other update to the document that happens
+The problem here is that any other update to the array that happens
 between the time of the `findOne` and the `update` will be lost,
 overwritten by this update which doesn’t take into account what has
 changed.
 
 The [Update if
 Current](http://docs.mongodb.org/manual/tutorial/isolate-sequence-of-operations/#update-if-current)
-pattern performs the update *only if* the document &mdash; or the part
-of the document that is being updated &mdash; hasn’t been changed.
-The update is thus only applied if it is valid.
+pattern performs the update *only if* the relevant part of the
+document hasn’t been changed.  The update is thus only applied if it
+is valid.
 
 The `updateUntilCurrent` function provided by this package wraps the
 Update if Current pattern in a retry loop.  If the first update
