@@ -1,0 +1,17 @@
+{
+  "name": "mongo-update-until-current",
+
+  "description": "Atomic Mongo updates using the Update If Current pattern",
+
+  "homepage": "https://github.com/awwx/mongo-update-until-current#readme",
+
+  "author": "Andrew Wilcox",
+
+  "version": "1.0.0",
+
+  "git": "https://github.com/awwx/mongo-update-until-current.git",
+
+  "packages": {
+    "obj": {}
+  }
+}
